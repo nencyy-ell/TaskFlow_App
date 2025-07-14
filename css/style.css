@@ -1,0 +1,208 @@
+/* Reset dan dasar */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: "grey";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* Splash Screen */
+.splash-screen {
+  display: flex;
+  flex-direction: column;      /* Susun anak elemen secara vertikal */
+  justify-content: center;     /* Center secara vertikal */
+  align-items: center;         /* Center secara horizontal */
+  height: 100vh;               /* Tinggi penuh viewport */
+  background-image: url('../images/bgsplash.jpeg');
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% auto;
+  font-size: 1.rem;
+  text-align: center;
+  padding: 20px;
+  color: rgb(39, 39, 100);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+/* Sembunyikan main app saat splash screen aktif */
+.hidden {
+  display: none;
+}
+
+/* Container utama */
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background: rgba(35, 35, 79, 0.85);
+  border-radius: 15px;
+  box-shadow: 0 0 15px #0008;
+}
+
+/* Styling input, button, select */
+input, button, select {
+  padding: 8px 12px;
+  margin: 5px 5px 15px 0;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+}
+
+/* Tombol dengan efek hover */
+button {
+  background: #6c63ff;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: #574fd6;
+}
+
+/* Tabel styling */
+table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
+  box-shadow: 0 0 10px #0007;
+  border-radius: 10px;
+  overflow: hidden;
+}
+th, td {
+  padding: 12px 15px;
+  text-align: center;
+  border-bottom: 1px solid #444;
+}
+th {
+  background: #6c63ff;
+  color: #fff;
+  font-weight: 600;
+}
+tbody tr:hover {
+  background: #444;
+  cursor: pointer;
+}
+
+/* Tombol hapus semua */
+#clear-all {
+  margin-top: 20px;
+  background: #ff6363;
+}
+
+/* Container filter */
+.filter-container {
+  margin-bottom: 10px;
+}
+
+/* Status dengan warna berbeda */
+.status-not\ yet {
+  color: #f0ad4e;
+  font-weight: bold;
+}
+.status-on\ process {
+  color: #0275d8;
+  font-weight: bold;
+}
+.status-done {
+  color: #5cb85c;
+  font-weight: bold;
+}
+.status-cancel {
+  color: #d9534f;
+  font-weight: bold;
+}
+
+/* Tombol aksi hapus */
+.action-button {
+  background: #ff6363;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 2px;
+  font-size: 12px;
+  transition: background 0.3s ease;
+}
+.action-button:hover {
+  background: #d43f3a;
+}
+
+/* Tombol aksi ubah status */
+.action-status {
+  background: #6c63ff;
+  border: none;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 2px;
+  font-size: 12px;
+  transition: background 0.3s ease;
+}
+.action-status:hover {
+  background: #574fd6;
+}
+
+/* Form input lebih rapat dan rapi */
+form#todo-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+form#todo-form input[type="text"],
+form#todo-form input[type="date"],
+form#todo-form select {
+  flex: 1 1 auto;
+  min-width: 120px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+}
+
+/* Tombol tambah */
+form#todo-form button {
+  padding: 8px 16px;
+  background: #6c63ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+form#todo-form button:hover {
+  background: #574fd6;
+}
+
+/* Catatan motivasi */
+.motivation {
+  text-align: center;
+  font-style: italic;
+  color: #6b7280;
+  font-weight: 600;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #e0e7ff;
+  border-radius: 12px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
