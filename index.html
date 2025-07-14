@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TaskFlow_Nencyelvaretta</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Splash Screen -->
+  <div id="splash-screen" class="splash-screen">
+    <p><h1>Ready to achieve?</h1><b></b></p>
+    <p><h1>Let's plan and reach your goals!</h1><b></b></p>
+  </div>
+
+  <!-- Halaman Utama (disembunyikan saat splash aktif) -->
+  <div id="main-app" class="hidden">
+    <div class="container">
+      <h2>TaskFlow</h2>
+      <form id="todo-form">
+        <input type="text" id="task" placeholder="What is today's task?" />
+        <input type="date" id="date" />
+        <select id="status-select">
+          <option value="not yet">Not Yet</option>
+          <option value="on process">On Process</option>
+          <option value="done">Done</option>
+          <option value="cancel">Cancel</option>
+        </select>
+        <button type="submit">Add Task</button>
+      </form>
+
+      <div class="filter-container">
+        <label for="filter-status">Filter Status: </label>
+        <select id="filter-status">
+          <option value="all">All</option>
+          <option value="not yet">Not Yet</option>
+          <option value="on process">On Process</option>
+          <option value="done">Done</option>
+          <option value="cancel">Cancel</option>
+        </select>
+      </div>
+
+      <input type="text" id="search" placeholder="Search task..." />
+
+      <table>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>Deadline</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="todo-list"></tbody>
+      </table>
+
+      <button id="clear-all">Delete All</button>
+
+      <footer class="motivation">
+        "Kamu tidak sedang bersaing dengan siapapun, teruslah bertumbuh menjadi versi terbaik dari dirimu sendiri."
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
